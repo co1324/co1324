@@ -7,7 +7,11 @@
 <style>
   .slider-container {
     width: 100%;
+    height: 100vh; /* 100% viewport height */
     overflow: hidden;
+    display: flex;
+    justify-content: center; /* 가로 가운데 정렬 */
+    align-items: center; /* 세로 가운데 정렬 */
     position: relative;
   }
   
@@ -23,8 +27,8 @@
   }
   
   .slide img {
-    width: 100%;
-    height: auto;
+    width: auto;
+    max-height: 100%; /* 세로가 꽉 찰 때 이미지의 가로 크기를 자동 조정 */
   }
 
   /* Responsive styling for smaller screens */
@@ -51,7 +55,7 @@
     border: none;
     outline: none;
   }
-
+  
   .prev {
     left: 10px;
   }
