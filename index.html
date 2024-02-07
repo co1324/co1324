@@ -262,6 +262,8 @@
 
 <script>
   let slideIndex = 0;
+  let touchStartX = 0;
+  let touchEndX = 0;
   const slides = document.querySelectorAll('.slide');
 
   function goToImage() {
@@ -293,6 +295,27 @@
       slideIndex = 0; // If on last slide, go to first slide
     }
     showSlide(slideIndex);
+  }
+
+  function touchStart(event) {
+    touchStartX = event.touches[0].clientX;
+  }
+
+  function touchMove(event) {
+    touchEndX = event.touches[0].clientX;
+  }
+
+  function touchEnd() {
+    const touchDiff = touchEndX - touchStartX;
+    if (Math.abs(touchDiff) > 50) { // Swipe threshold
+      if (touchDiff > 0) {
+        // Swipe right
+        prevSlide();
+      } else {
+        // Swipe left
+        nextSlide();
+      }
+    }
   }
 
 </script>
