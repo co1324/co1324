@@ -1,78 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"> <!-- maximum-scale 속성 추가 -->
-  <title>Swiper.js Responsive Images with Navigation and Sequential Pages</title>
-  <!-- Link Swiper's CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-  <style>
-    /* 모바일 화면에서 중앙 정렬 */
-    body {
-      display: flex;
-      flex-direction: column; /* 아래로 요소를 배열하기 위해 열 방향으로 설정 */
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Slider</title>
+<style>
+  .slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease;
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+  }
+  
+  .slide {
+    min-width: 100%;
+    overflow: hidden;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: auto;
+  }
 
-    .swiper-container {
-      width: 90%; /* 모바일 화면에서 가로폭 90%로 설정 */
-      height: 60%; /* 모바일 화면에서 높이 80%로 설정 */
-      overflow: hidden; /* 스크롤바를 숨김 */
-      position: relative; /* 상대적인 위치 설정 */
-    }
-
-    .swiper-slide img {
-      width: auto;
-      max-width: 100%; /* 이미지의 최대 너비 설정 */
+  /* Responsive styling for smaller screens */
+  @media screen and (max-width: 768px) {
+    .slide img {
+      max-width: 100%;
       height: auto;
-      display: block; /* 이미지를 가운데 정렬하기 위해 추가 */
-      margin: 0 auto; /* 이미지를 가운데 정렬하기 위해 추가 */
     }
+  }
 
-    /* Input 스타일 */
-    .page-input {
-      margin-top: 10px;
-      text-align: center;
-    }
+  .slide-control {
+    margin-top: 10px;
+  }
 
-    .page-input input[type="number"] {
-      width: 200px; /* 입력 창을 길게 만듭니다. */
-      padding: 10px;
-      font-size: 16px;
-    }
+  .arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border: none;
+    outline: none;
+  }
 
-    /* 화살표 스타일 */
-    .swiper-button-prev,
-    .swiper-button-next {
-      color: #000; /* 화살표 색상 검정색으로 변경 */
-      font-size: 30px;
-      position: absolute; /* 절대적인 위치 설정 */
-      top: 50%; /* 상단 위치를 50%로 조정 */
-      transform: translateY(-50%); /* 세로 가운데 정렬 */
-      z-index: 10; /* 다른 요소 위에 표시되도록 설정 */
-      max-width: 10%; /* 이미지 가로 길이의 10%로 설정 */
-    }
+  .prev {
+    left: 10px;
+  }
 
-    .swiper-button-prev {
-      left: 10px; /* 좌측에 위치 */
-    }
-
-    .swiper-button-next {
-      right: 10px; /* 우측에 위치 */
-    }
-
-    /* dot 삭제 */
-    .swiper-pagination {
-      display: none;
-    }
-  </style>
+  .next {
+    right: 10px;
+  }
+</style>
 </head>
 <body>
-  <!-- Swiper -->
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
+<div class="slider-container">
+  <div class="slider">
       <!-- Slides -->
 <div class="swiper-slide"><img src="slide001.JPG"></div>
 <div class="swiper-slide"><img src="slide002.JPG"></div>
@@ -277,64 +268,51 @@
 
     </div>
     <!-- Navigation Arrows -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-  </div>
+ <button class="arrow prev" onclick="prevSlide()">&#10094;</button>
+  <button class="arrow next" onclick="nextSlide()">&#10095;</button>
+</div>
 
-  <!-- Input Number -->
-  <div class="page-input">
-    <input type="number" id="pageNumberInput" min="1" max="200" placeholder="페이지 찾기">
-  </div>
+<!-- Input box and button for image number -->
+<div class="slide-control">
+  <input type="number" id="imageNumber" placeholder="Enter Image Number">
+  <button onclick="goToImage()">Go</button>
+</div>
 
-<!-- Swiper JS -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script>
-    // Get input element
-    var input = document.getElementById("pageNumberInput");
+<script>
+  let slideIndex = 0;
+  const slides = document.querySelectorAll('.slide');
 
-    // Execute a function when the user releases a key on the keyboard
-    input.addEventListener("keyup", function(event) {
-      // Number 13 is the "Enter" key on the keyboard
-      if (event.keyCode === 13) {
-        // Cancel the default action, if needed
-        event.preventDefault();
-        // Call function to change slide
-        goToPage();
-      }
-    });
-
-    // Keyboard event listeners for left and right arrows
-    document.addEventListener("keydown", function(event) {
-      if (event.keyCode === 37) { // Left arrow
-        swiper.slidePrev();
-      } else if (event.keyCode === 39) { // Right arrow
-        swiper.slideNext();
-      }
-    });
-
-    function goToPage() {
-      // Get the entered page number
-      var pageNumber = parseInt(document.getElementById("pageNumberInput").value);
-      // Move swiper to the specified page number
-      if (pageNumber >= 1 && pageNumber <= 200) {
-        // Move swiper to the specified page number
-        swiper.slideTo(pageNumber - 1, 1000); // -1 because array index starts from 0
-      } else {
-        alert("Please enter a valid page number between 1 and 200.");
-      }
+  function goToImage() {
+    const imageNumber = parseInt(document.getElementById('imageNumber').value);
+    if (imageNumber >= 1 && imageNumber <= slides.length) {
+      slideIndex = imageNumber - 1;
+      showSlide(slideIndex);
+    } else {
+      alert('Invalid image number. Please enter a number between 1 and ' + slides.length);
     }
+  }
+  
+  function showSlide(index) {
+    const offset = -index * 100;
+    document.querySelector('.slider').style.transform = `translateX(${offset}%)`;
+  }
 
-    var swiper = new Swiper('.swiper-container', {
-      // Optional parameters
-      direction: 'horizontal',
-      loop: true,
+  function prevSlide() {
+    if (slideIndex > 0) {
+      slideIndex--;
+      showSlide(slideIndex);
+    }
+  }
 
-      // Navigation arrows
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-  </script>
+  function nextSlide() {
+    if (slideIndex < slides.length - 1) {
+      slideIndex++;
+    } else {
+      slideIndex = 0; // If on last slide, go to first slide
+    }
+    showSlide(slideIndex);
+  }
+
+</script>
 </body>
 </html>
