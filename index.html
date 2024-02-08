@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"> <!-- maximum-scale 속성 추가 -->
+  <title>Swiper.js Responsive Images with Navigation and Sequential Pages</title>
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <style>
+    /* 모바일 화면에서 중앙 정렬 */
+    body {
+      display: flex;
+      flex-direction: column; /* 아래로 요소를 배열하기 위해 열 방향으로 설정 */
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .swiper-container {
+      width: 90%; /* 모바일 화면에서 가로폭 90%로 설정 */
+      height: 60%; /* 모바일 화면에서 높이 80%로 설정 */
+      overflow: hidden; /* 스크롤바를 숨김 */
+      position: relative; /* 상대적인 위치 설정 */
+    }
+
+    .swiper-slide img {
+      width: auto;
+      max-width: 100%; /* 이미지의 최대 너비 설정 */
+      height: auto;
+      display: block; /* 이미지를 가운데 정렬하기 위해 추가 */
+      margin: 0 auto; /* 이미지를 가운데 정렬하기 위해 추가 */
+    }
+
+    /* Input 스타일 */
+    .page-input {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .page-input input[type="number"] {
+      width: 200px; /* 입력 창을 길게 만듭니다. */
+      padding: 21px;
+      font-size: 16px;
+    }
+
+    /* 화살표 스타일 */
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: #000; /* 화살표 색상 검정색으로 변경 */
+      font-size: 30px;
+      position: absolute; /* 절대적인 위치 설정 */
+      top: 50%; /* 상단 위치를 50%로 조정 */
+      transform: translateY(-50%); /* 세로 가운데 정렬 */
+      z-index: 10; /* 다른 요소 위에 표시되도록 설정 */
+      max-width: 10%; /* 이미지 가로 길이의 10%로 설정 */
+    }
+
+    .swiper-button-prev {
+      left: 10px; /* 좌측에 위치 */
+    }
+
+    .swiper-button-next {
+      right: 10px; /* 우측에 위치 */
+    }
+
+    /* dot 삭제 */
+    .swiper-pagination {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+<div class="swiper-slide"><img src="slide001.JPG"></div>
+<div class="swiper-slide"><img src="slide002.JPG"></div>
+<div class="swiper-slide"><img src="slide003.JPG"></div>
+<div class="swiper-slide"><img src="slide004.JPG"></div>
+<div class="swiper-slide"><img src="slide005.JPG"></div>
+<div class="swiper-slide"><img src="slide006.JPG"></div>
+<div class="swiper-slide"><img src="slide007.JPG"></div>
+<div class="swiper-slide"><img src="slide008.JPG"></div>
+<div class="swiper-slide"><img src="slide009.JPG"></div>
+<div class="swiper-slide"><img src="slide010.JPG"></div>
+<div class="swiper-slide"><img src="slide011.JPG"></div>
+<div class="swiper-slide"><img src="slide012.JPG"></div>
+<div class="swiper-slide"><img src="slide013.JPG"></div>
+<div class="swiper-slide"><img src="slide014.JPG"></div>
+<div class="swiper-slide"><img src="slide015.JPG"></div>
+<div class="swiper-slide"><img src="slide016.JPG"></div>
+<div class="swiper-slide"><img src="slide017.JPG"></div>
+<div class="swiper-slide"><img src="slide018.JPG"></div>
+<div class="swiper-slide"><img src="slide019.JPG"></div>
+<div class="swiper-slide"><img src="slide020.JPG"></div>
+<div class="swiper-slide"><img src="slide021.JPG"></div>
+<div class="swiper-slide"><img src="slide022.JPG"></div>
+<div class="swiper-slide"><img src="slide023.JPG"></div>
+<div class="swiper-slide"><img src="slide024.JPG"></div>
+<div class="swiper-slide"><img src="slide025.JPG"></div>
+<div class="swiper-slide"><img src="slide026.JPG"></div>
+<div class="swiper-slide"><img src="slide027.JPG"></div>
+<div class="swiper-slide"><img src="slide028.JPG"></div>
+<div class="swiper-slide"><img src="slide029.JPG"></div>
+<div class="swiper-slide"><img src="slide030.JPG"></div>
+<div class="swiper-slide"><img src="slide031.JPG"></div>
+<div class="swiper-slide"><img src="slide032.JPG"></div>
+<div class="swiper-slide"><img src="slide033.JPG"></div>
+<div class="swiper-slide"><img src="slide034.JPG"></div>
+<div class="swiper-slide"><img src="slide035.JPG"></div>
+<div class="swiper-slide"><img src="slide036.JPG"></div>
+<div class="swiper-slide"><img src="slide037.JPG"></div>
+<div class="swiper-slide"><img src="slide038.JPG"></div>
+<div class="swiper-slide"><img src="slide039.JPG"></div>
+<div class="swiper-slide"><img src="slide040.JPG"></div>
+<div class="swiper-slide"><img src="slide041.JPG"></div>
+<div class="swiper-slide"><img src="slide042.JPG"></div>
+<div class="swiper-slide"><img src="slide043.JPG"></div>
+<div class="swiper-slide"><img src="slide044.JPG"></div>
+<div class="swiper-slide"><img src="slide045.JPG"></div>
+<div class="swiper-slide"><img src="slide046.JPG"></div>
+<div class="swiper-slide"><img src="slide047.JPG"></div>
+<div class="swiper-slide"><img src="slide048.JPG"></div>
+<div class="swiper-slide"><img src="slide049.JPG"></div>
+<div class="swiper-slide"><img src="slide050.JPG"></div>
+<div class="swiper-slide"><img src="slide051.JPG"></div>
+<div class="swiper-slide"><img src="slide052.JPG"></div>
+<div class="swiper-slide"><img src="slide053.JPG"></div>
+<div class="swiper-slide"><img src="slide054.JPG"></div>
+<div class="swiper-slide"><img src="slide055.JPG"></div>
+<div class="swiper-slide"><img src="slide056.JPG"></div>
+<div class="swiper-slide"><img src="slide057.JPG"></div>
+<div class="swiper-slide"><img src="slide058.JPG"></div>
+<div class="swiper-slide"><img src="slide059.JPG"></div>
+<div class="swiper-slide"><img src="slide060.JPG"></div>
+<div class="swiper-slide"><img src="slide061.JPG"></div>
+<div class="swiper-slide"><img src="slide062.JPG"></div>
+<div class="swiper-slide"><img src="slide063.JPG"></div>
+<div class="swiper-slide"><img src="slide064.JPG"></div>
+<div class="swiper-slide"><img src="slide065.JPG"></div>
+<div class="swiper-slide"><img src="slide066.JPG"></div>
+<div class="swiper-slide"><img src="slide067.JPG"></div>
+<div class="swiper-slide"><img src="slide068.JPG"></div>
+<div class="swiper-slide"><img src="slide069.JPG"></div>
+<div class="swiper-slide"><img src="slide070.JPG"></div>
+<div class="swiper-slide"><img src="slide071.JPG"></div>
+<div class="swiper-slide"><img src="slide072.JPG"></div>
+<div class="swiper-slide"><img src="slide073.JPG"></div>
+<div class="swiper-slide"><img src="slide074.JPG"></div>
+<div class="swiper-slide"><img src="slide075.JPG"></div>
+<div class="swiper-slide"><img src="slide076.JPG"></div>
+<div class="swiper-slide"><img src="slide077.JPG"></div>
+<div class="swiper-slide"><img src="slide078.JPG"></div>
+<div class="swiper-slide"><img src="slide079.JPG"></div>
+<div class="swiper-slide"><img src="slide080.JPG"></div>
+<div class="swiper-slide"><img src="slide081.JPG"></div>
+<div class="swiper-slide"><img src="slide082.JPG"></div>
+<div class="swiper-slide"><img src="slide083.JPG"></div>
+<div class="swiper-slide"><img src="slide084.JPG"></div>
+<div class="swiper-slide"><img src="slide085.JPG"></div>
+<div class="swiper-slide"><img src="slide086.JPG"></div>
+<div class="swiper-slide"><img src="slide087.JPG"></div>
+<div class="swiper-slide"><img src="slide088.JPG"></div>
+<div class="swiper-slide"><img src="slide089.JPG"></div>
+<div class="swiper-slide"><img src="slide090.JPG"></div>
+<div class="swiper-slide"><img src="slide091.JPG"></div>
+<div class="swiper-slide"><img src="slide092.JPG"></div>
+<div class="swiper-slide"><img src="slide093.JPG"></div>
+<div class="swiper-slide"><img src="slide094.JPG"></div>
+<div class="swiper-slide"><img src="slide095.JPG"></div>
+<div class="swiper-slide"><img src="slide096.JPG"></div>
+<div class="swiper-slide"><img src="slide097.JPG"></div>
+<div class="swiper-slide"><img src="slide098.JPG"></div>
+<div class="swiper-slide"><img src="slide099.JPG"></div>
+<div class="swiper-slide"><img src="slide100.JPG"></div>
+<div class="swiper-slide"><img src="slide101.JPG"></div>
+<div class="swiper-slide"><img src="slide102.JPG"></div>
+<div class="swiper-slide"><img src="slide103.JPG"></div>
+<div class="swiper-slide"><img src="slide104.JPG"></div>
+<div class="swiper-slide"><img src="slide105.JPG"></div>
+<div class="swiper-slide"><img src="slide106.JPG"></div>
+<div class="swiper-slide"><img src="slide107.JPG"></div>
+<div class="swiper-slide"><img src="slide108.JPG"></div>
+<div class="swiper-slide"><img src="slide109.JPG"></div>
+<div class="swiper-slide"><img src="slide110.JPG"></div>
+<div class="swiper-slide"><img src="slide111.JPG"></div>
+<div class="swiper-slide"><img src="slide112.JPG"></div>
+<div class="swiper-slide"><img src="slide113.JPG"></div>
+<div class="swiper-slide"><img src="slide114.JPG"></div>
+<div class="swiper-slide"><img src="slide115.JPG"></div>
+<div class="swiper-slide"><img src="slide116.JPG"></div>
+<div class="swiper-slide"><img src="slide117.JPG"></div>
+<div class="swiper-slide"><img src="slide118.JPG"></div>
+<div class="swiper-slide"><img src="slide119.JPG"></div>
+<div class="swiper-slide"><img src="slide120.JPG"></div>
+<div class="swiper-slide"><img src="slide121.JPG"></div>
+<div class="swiper-slide"><img src="slide122.JPG"></div>
+<div class="swiper-slide"><img src="slide123.JPG"></div>
+<div class="swiper-slide"><img src="slide124.JPG"></div>
+<div class="swiper-slide"><img src="slide125.JPG"></div>
+<div class="swiper-slide"><img src="slide126.JPG"></div>
+<div class="swiper-slide"><img src="slide127.JPG"></div>
+<div class="swiper-slide"><img src="slide128.JPG"></div>
+<div class="swiper-slide"><img src="slide129.JPG"></div>
+<div class="swiper-slide"><img src="slide130.JPG"></div>
+<div class="swiper-slide"><img src="slide131.JPG"></div>
+<div class="swiper-slide"><img src="slide132.JPG"></div>
+<div class="swiper-slide"><img src="slide133.JPG"></div>
+<div class="swiper-slide"><img src="slide134.JPG"></div>
+<div class="swiper-slide"><img src="slide135.JPG"></div>
+<div class="swiper-slide"><img src="slide136.JPG"></div>
+<div class="swiper-slide"><img src="slide137.JPG"></div>
+<div class="swiper-slide"><img src="slide138.JPG"></div>
+<div class="swiper-slide"><img src="slide139.JPG"></div>
+<div class="swiper-slide"><img src="slide140.JPG"></div>
+<div class="swiper-slide"><img src="slide141.JPG"></div>
+<div class="swiper-slide"><img src="slide142.JPG"></div>
+<div class="swiper-slide"><img src="slide143.JPG"></div>
+<div class="swiper-slide"><img src="slide144.JPG"></div>
+<div class="swiper-slide"><img src="slide145.JPG"></div>
+<div class="swiper-slide"><img src="slide146.JPG"></div>
+<div class="swiper-slide"><img src="slide147.JPG"></div>
+<div class="swiper-slide"><img src="slide148.JPG"></div>
+<div class="swiper-slide"><img src="slide149.JPG"></div>
+<div class="swiper-slide"><img src="slide150.JPG"></div>
+<div class="swiper-slide"><img src="slide151.JPG"></div>
+<div class="swiper-slide"><img src="slide152.JPG"></div>
+<div class="swiper-slide"><img src="slide153.JPG"></div>
+<div class="swiper-slide"><img src="slide154.JPG"></div>
+<div class="swiper-slide"><img src="slide155.JPG"></div>
+<div class="swiper-slide"><img src="slide156.JPG"></div>
+<div class="swiper-slide"><img src="slide157.JPG"></div>
+<div class="swiper-slide"><img src="slide158.JPG"></div>
+<div class="swiper-slide"><img src="slide159.JPG"></div>
+<div class="swiper-slide"><img src="slide160.JPG"></div>
+<div class="swiper-slide"><img src="slide161.JPG"></div>
+<div class="swiper-slide"><img src="slide162.JPG"></div>
+<div class="swiper-slide"><img src="slide163.JPG"></div>
+<div class="swiper-slide"><img src="slide164.JPG"></div>
+<div class="swiper-slide"><img src="slide165.JPG"></div>
+<div class="swiper-slide"><img src="slide166.JPG"></div>
+<div class="swiper-slide"><img src="slide167.JPG"></div>
+<div class="swiper-slide"><img src="slide168.JPG"></div>
+<div class="swiper-slide"><img src="slide169.JPG"></div>
+<div class="swiper-slide"><img src="slide170.JPG"></div>
+<div class="swiper-slide"><img src="slide171.JPG"></div>
+<div class="swiper-slide"><img src="slide172.JPG"></div>
+<div class="swiper-slide"><img src="slide173.JPG"></div>
+<div class="swiper-slide"><img src="slide174.JPG"></div>
+<div class="swiper-slide"><img src="slide175.JPG"></div>
+<div class="swiper-slide"><img src="slide176.JPG"></div>
+<div class="swiper-slide"><img src="slide177.JPG"></div>
+<div class="swiper-slide"><img src="slide178.JPG"></div>
+<div class="swiper-slide"><img src="slide179.JPG"></div>
+<div class="swiper-slide"><img src="slide180.JPG"></div>
+<div class="swiper-slide"><img src="slide181.JPG"></div>
+<div class="swiper-slide"><img src="slide182.JPG"></div>
+<div class="swiper-slide"><img src="slide183.JPG"></div>
+<div class="swiper-slide"><img src="slide184.JPG"></div>
+<div class="swiper-slide"><img src="slide185.JPG"></div>
+<div class="swiper-slide"><img src="slide186.JPG"></div>
+<div class="swiper-slide"><img src="slide187.JPG"></div>
+<div class="swiper-slide"><img src="slide188.JPG"></div>
+<div class="swiper-slide"><img src="slide189.JPG"></div>
+<div class="swiper-slide"><img src="slide190.JPG"></div>
+<div class="swiper-slide"><img src="slide191.JPG"></div>
+<div class="swiper-slide"><img src="slide192.JPG"></div>
+<div class="swiper-slide"><img src="slide193.JPG"></div>
+<div class="swiper-slide"><img src="slide194.JPG"></div>
+<div class="swiper-slide"><img src="slide195.JPG"></div>
+<div class="swiper-slide"><img src="slide196.JPG"></div>
+<div class="swiper-slide"><img src="slide197.JPG"></div>
+<div class="swiper-slide"><img src="slide198.JPG"></div>
+<div class="swiper-slide"><img src="slide199.JPG"></div>
+<div class="swiper-slide"><img src="slide200.JPG"></div>
+
+    </div>
+    <!-- Navigation Arrows -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+  <!-- Input Number -->
+  <div class="page-input">
+    <input type="number" id="pageNumberInput" min="1" max="200" placeholder="페이지 찾기">
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    // Get input element
+    var input = document.getElementById("pageNumberInput");
+
+    // Execute a function when the user releases a key on the keyboard
+    input.addEventListener("keyup", function(event) {
+      // Number 13 is the "Enter" key on the keyboard
+      if (event.keyCode === 13) {
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Call function to change slide
+        goToPage();
+      }
+    });
+
+    // Keyboard event listeners for left and right arrows
+    document.addEventListener("keydown", function(event) {
+      if (event.keyCode === 37) { // Left arrow
+        swiper.slidePrev();
+      } else if (event.keyCode === 39) { // Right arrow
+        swiper.slideNext();
+      }
+    });
+
+    function goToPage() {
+      // Get the entered page number
+      var pageNumber = parseInt(document.getElementById("pageNumberInput").value);
+      // Move swiper to the specified page number
+      if (pageNumber >= 1 && pageNumber <= 200) {
+        // Move swiper to the specified page number
+        swiper.slideTo(pageNumber - 1, 1000); // -1 because array index starts from 0
+      } else {
+        alert("Please enter a valid page number between 1 and 5.");
+      }
+    }
+
+    var swiper = new Swiper('.swiper-container', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+</html>
