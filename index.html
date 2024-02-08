@@ -281,9 +281,9 @@
     <div class="swiper-button-next"></div>
   </div>
 
- <!-- Input Number -->
+  <!-- Input Number -->
   <div class="page-input">
-    <input type="number" id="pageNumberInput" min="1" max="5" placeholder="페이지 찾기">
+    <input type="number" id="pageNumberInput" min="1" max="200" placeholder="페이지 찾기">
   </div>
 
   <!-- Swiper JS -->
@@ -303,6 +303,15 @@
       }
     });
 
+    // Keyboard event listeners for left and right arrows
+    document.addEventListener("keydown", function(event) {
+      if (event.keyCode === 37) { // Left arrow
+        swiper.slidePrev();
+      } else if (event.keyCode === 39) { // Right arrow
+        swiper.slideNext();
+      }
+    });
+
     // Swiper instance
     var swiper = new Swiper('.swiper-container', {
       // Optional parameters
@@ -319,7 +328,7 @@
       touchEventsTarget: 'wrapper',
       touchRatio: 1,
       touchAngle: 45,
-      simulateTouch: false, // iOS 기반의 Safari에서 실제 터치 이벤트 사용
+      simulateTouch: true,
       shortSwipes: false,
       longSwipes: false,
       longSwipesRatio: 0.5,
@@ -331,10 +340,10 @@
     // Function to change slide based on entered page number
     function goToPage() {
       var pageNumber = parseInt(document.getElementById("pageNumberInput").value);
-      if (pageNumber >= 1 && pageNumber <= 5) {
+      if (pageNumber >= 1 && pageNumber <= 200) {
         swiper.slideTo(pageNumber - 1, 1000);
       } else {
-        alert("Please enter a valid page number between 1 and 5.");
+        alert("Please enter a valid page number between 1 and 200.");
       }
     }
   </script>
