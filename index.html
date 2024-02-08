@@ -316,11 +316,11 @@
       // Get the entered page number
       var pageNumber = parseInt(document.getElementById("pageNumberInput").value);
       // Move swiper to the specified page number
-      if (pageNumber >= 1 && pageNumber <= 5) {
+      if (pageNumber >= 1 && pageNumber <= 200) {
         // Move swiper to the specified page number
         swiper.slideTo(pageNumber - 1, 1000); // -1 because array index starts from 0
       } else {
-        alert("Please enter a valid page number between 1 and 5.");
+        alert("Please enter a valid page number between 1 and 200.");
       }
     }
 
