@@ -286,7 +286,7 @@
     <input type="number" id="pageNumberInput" min="1" max="200" placeholder="페이지 찾기">
   </div>
 
-  <!-- Swiper JS -->
+<!-- Swiper JS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
     // Get input element
@@ -312,7 +312,18 @@
       }
     });
 
-    // Swiper instance
+    function goToPage() {
+      // Get the entered page number
+      var pageNumber = parseInt(document.getElementById("pageNumberInput").value);
+      // Move swiper to the specified page number
+      if (pageNumber >= 1 && pageNumber <= 5) {
+        // Move swiper to the specified page number
+        swiper.slideTo(pageNumber - 1, 1000); // -1 because array index starts from 0
+      } else {
+        alert("Please enter a valid page number between 1 and 5.");
+      }
+    }
+
     var swiper = new Swiper('.swiper-container', {
       // Optional parameters
       direction: 'horizontal',
@@ -323,29 +334,7 @@
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-
-      // Mobile touch events optimization
-      touchEventsTarget: 'wrapper',
-      touchRatio: 1,
-      touchAngle: 45,
-      simulateTouch: true,
-      shortSwipes: false,
-      longSwipes: false,
-      longSwipesRatio: 0.5,
-      longSwipesMs: 300,
-      followFinger: false,
-      allowTouchMove: true
     });
-
-    // Function to change slide based on entered page number
-    function goToPage() {
-      var pageNumber = parseInt(document.getElementById("pageNumberInput").value);
-      if (pageNumber >= 1 && pageNumber <= 200) {
-        swiper.slideTo(pageNumber - 1, 1000);
-      } else {
-        alert("Please enter a valid page number between 1 and 200.");
-      }
-    }
   </script>
 </body>
 </html>
