@@ -39,7 +39,7 @@
 
     .page-input input[type="number"] {
       width: 200px; /* 입력 창을 길게 만듭니다. */
-      padding: 21px;
+      padding: 10px;
       font-size: 16px;
     }
 
@@ -281,9 +281,9 @@
     <div class="swiper-button-next"></div>
   </div>
 
-  <!-- Input Number -->
+ <!-- Input Number -->
   <div class="page-input">
-    <input type="number" id="pageNumberInput" min="1" max="200" placeholder="페이지 찾기">
+    <input type="number" id="pageNumberInput" min="1" max="5" placeholder="페이지 찾기">
   </div>
 
   <!-- Swiper JS -->
@@ -303,27 +303,7 @@
       }
     });
 
-    // Keyboard event listeners for left and right arrows
-    document.addEventListener("keydown", function(event) {
-      if (event.keyCode === 37) { // Left arrow
-        swiper.slidePrev();
-      } else if (event.keyCode === 39) { // Right arrow
-        swiper.slideNext();
-      }
-    });
-
-    function goToPage() {
-      // Get the entered page number
-      var pageNumber = parseInt(document.getElementById("pageNumberInput").value);
-      // Move swiper to the specified page number
-      if (pageNumber >= 1 && pageNumber <= 200) {
-        // Move swiper to the specified page number
-        swiper.slideTo(pageNumber - 1, 1000); // -1 because array index starts from 0
-      } else {
-        alert("Please enter a valid page number between 1 and 200.");
-      }
-    }
-
+    // Swiper instance
     var swiper = new Swiper('.swiper-container', {
       // Optional parameters
       direction: 'horizontal',
@@ -334,7 +314,29 @@
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
+
+      // Mobile touch events optimization
+      touchEventsTarget: 'wrapper',
+      touchRatio: 1,
+      touchAngle: 45,
+      simulateTouch: false, // iOS 기반의 Safari에서 실제 터치 이벤트 사용
+      shortSwipes: false,
+      longSwipes: false,
+      longSwipesRatio: 0.5,
+      longSwipesMs: 300,
+      followFinger: false,
+      allowTouchMove: true
     });
+
+    // Function to change slide based on entered page number
+    function goToPage() {
+      var pageNumber = parseInt(document.getElementById("pageNumberInput").value);
+      if (pageNumber >= 1 && pageNumber <= 5) {
+        swiper.slideTo(pageNumber - 1, 1000);
+      } else {
+        alert("Please enter a valid page number between 1 and 5.");
+      }
+    }
   </script>
 </body>
 </html>
