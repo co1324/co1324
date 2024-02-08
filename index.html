@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swiper.js 반응형 슬라이더</title>
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <style>
+    /* Optional: Add custom styles for slider container */
+    .swiper-container {
+      width: 100%;
+      height: 100vh; /* 100% 높이 대신 화면의 전체 높이를 채우도록 조정 */
+      display: flex;
+      justify-content: center; /* 수평 가운데 정렬 */
+      align-items: center; /* 수직 가운데 정렬 */
+      overflow: hidden; /* Added to control overflow */
+    }
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: #f1f1f1; /* Background color for better visibility */
+    }
+    .swiper-slide img {
+      max-width: 100%; /* Set max-width to 100% */
+      height: auto; /* Maintain aspect ratio */
+      display: block;
+      margin: auto; /* Center the image horizontally */
+    }
+    .swiper-pagination {
+      display: none; /* Hide pagination dots */
+    }
+  </style>
+</head>
+<body>
+  <!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <!-- Repeat the following div for each slide -->
+      <!-- You can generate these dynamically using JavaScript -->
+      <!-- Example: for loop to generate 60 slides -->
+      <!-- Adjust the image paths accordingly -->
+  <div class="swiper-slide"><img src="https://github.com/co1324/test/assets/159250727/ce5ec988-a196-4a2b-a19f-7bcff0a131de" alt="Slide 1"></div>
+  <!-- Slide 2 -->
+  <div class="swiper-slide"><img src="https://github.com/co1324/test/assets/159250727/f6ef8fe8-c3a3-4c3e-9237-d191c44fa3b6" alt="Slide 2"></div>
+  <!-- Slide 3 -->
+  <div class="swiper-slide"><img src="https://github.com/co1324/test/assets/159250727/7d4762fb-be3e-4e46-a4b2-2b81578bde95" alt="Slide 3"></div>
+  <!-- Slide 4 -->
+  <div class="swiper-slide"><img src="https://github.com/co1324/test/assets/159250727/b44a16e1-2f95-4b43-a07c-6fbdcf25d292" alt="Slide 4"></div>
+  <!-- Slide 5 -->
+  <div class="swiper-slide"><img src="https://github.com/co1324/test/assets/159250727/d533fd9d-86cf-422a-8cb4-f99714ced899" alt="Slide 5"></div>
+  <!-- Slide 6 -->
+  <div class="swiper-slide"><img src="https://github.com/co1324/test/assets/159250727/1c1066da-67df-43e6-8b17-d70355023aa5" alt="Slide 6"></div>
+  <!-- Slide 7 -->
+  <div class="swiper-slide"><img src="https://github.com/co1324/test/assets/159250727/5d4bfd2f-147e-40e2-b380-7673271c2b6f" alt="Slide 7"></div>
+  <!-- Slide 8 -->
+  <div class="swiper-slide"><img src="https://github.com/co1324/test/assets/159250727/1497e740-b0a1-4bbb-b404-0660112d68ce" alt="Slide 8"></div>
+  <!-- Slide 9 -->
+  <div class="swiper-slide"><img src="https://github.com/co1324/test/assets/159250727/5676664f-2242-406b-8aec-4d2ba3ec5d22" alt="Slide 9"></div>
+  <!-- Slide 10 -->
+  <div class="swiper-slide"><img src="https://github.com/co1324/test/assets/159250727/f96d0834-aa0f-4e98-be0b-eb6cf6e6ca53" alt="Slide 10"></div>
+  <!-- Slide 11 -->
+  <div class="swiper-slide"><img src="https://github.com/co1324/test/assets/159250727/3ef9be2b-0a3f-4e7b-b240-11d8cfcd43ae" alt="Slide 11"></div>
+  <!-- Slide 12 -->
+  <div class="swiper-slide"><img src="https://github.com/co1324/test/assets/159250727/bce14e9d-b6a9-4a60-9c36-e2e94a346c44" alt="Slide 12"></div>
+  <!-- Slide 13 -->
+  <div class="swiper-slide"><img src="https://github.com/co1324/test/assets/159250727/703ad830-071f-4709-91cb-4d1fc4ff90da" alt="Slide 13"></div>
+  <!-- Slide 14 -->
+  <div class="swiper-slide"><img src="https://github.com/co1324/test/assets/159250727/d5816dd9-0986-4d3e-a888-7402de944697" alt="Slide 14"></div>
+  <!-- Slide 15 -->
+  <div class="swiper-slide"><img src="https://github.com/co1324/test/assets/159250727/ae739120-2e63-494d-92e8-e5553b846ec7" alt="Slide 15"></div>
+  <!-- Slide 16 -->
+  <div class="swiper-slide"><img src="https://github.com/co1324/test/assets/159250727/23b0caf8-6fd4-4622-8bbb-4c0cff193279" alt="Slide 16"></div>
+  <!-- Slide 17 -->
+  <div class="swiper-slide"><img src="https://github.com/co1324/test/assets/159250727/846c31d0-135b-426f-a8ed-6e14531aac42" alt="Slide 17"></div>
+  <!-- Slide 18 -->
+  <div class="swiper-slide"><img src="https://github.com/co1324/test/assets/159250727/6c2d55cd-c9c3-45df-bbbe-43d74e89424a" alt="Slide 18"></div>
+  <!-- Slide 19 -->
+  <div class="swiper-slide"><img src="https://github.com/co1324/test/assets/159250727/7adc9b0a-4fd5-42af-a267-6bd83e032c9e" alt="Slide 19"></div>
+  <!-- Slide 20 -->
+  <div class="swiper-slide"><img src="https://github.com/co1324/test/assets/159250727/a1ff435b-c26f-46e8-8a82-ba2852dc89b1" alt="Slide 20"></div>
+  <!-- Slide 21 -->
+  <div class="swiper-slide"><img src="https://github.com/co1324/test/assets/159250727/a87aa2f5-1b18-4194-a73b-4fed9659e918" alt="Slide 21"></div>
+  <!-- Slide 22 -->
+  <div class="swiper-slide"><img src="https://github.com/co1324/test/assets/159250727/3243952d-4ccb-4814-8389-0bcdc0a42a26" alt="Slide 22"></div>
+  <!-- Slide 23 -->
+  <div class="swiper-slide"><img src="https://github.com/co1324/test/assets/159250727/e8c3b0c2-b770-46c7-9a31-2df38e0ad8a8" alt="Slide 23"></div>
+  <!-- Slide 24 -->
+  <div class="swiper-slide"><img src="https://github.com/co1324/test/assets/159250727/5840b0bd-73d8-4d1c-842a-f6872c59667e" alt="Slide 24"></div>
+  <!-- Slide 25 -->
+  <div class="swiper-slide"><img src="https://github.com/co1324/test/assets/159250727/5c3d2936-83d2-4ba5-9995-8508bca7c735" alt="Slide 25"></div>
+  <!-- Slide 26 -->
+  <div class="swiper-slide"><img src="https://github.com/co1324/test/assets/159250727/581c7673-4929-402a-9523-f93810b32e30" alt="Slide 26"></div>
+  <!-- Slide 27 -->
+  <div class="swiper-slide"><img src="https://github.com/co1324/test/assets/159250727/926b6aad-6c82-4a66-9339-eeb9c3fc801d" alt="Slide 27"></div>
+  <!-- Slide 28 -->
+  <div class="swiper-slide"><img src="https://github.com/co1324/test/assets/159250727/13792233-0f9a-445b-b947-58d5678413a6" alt="Slide 28"></div>
+  <!-- Slide 29 -->
+  <div class="swiper-slide"><img src="https://github.com/co1324/test/assets/159250727/a14cd9fb-afd9-4e1f-824d-da02ba688dda" alt="Slide 29"></div>
+  <!-- Slide 30 -->
+  <div class="swiper-slide"><img src="https://github.com/co1324/test/assets/159250727/add1b5f9-435d-4204-b495-4c99b6a4b1ca" alt="Slide 30"></div>
+  <!-- Slide 31 -->
+  <div class="swiper-slide"><img src="slide031.jpg" alt="Slide 31"></div>
+  <!-- Slide 32 -->
+  <div class="swiper-slide"><img src="slide032.jpg" alt="Slide 32"></div>
+  <!-- Slide 33 -->
+  <div class="swiper-slide"><img src="slide033.jpg" alt="Slide 33"></div>
+  <!-- Slide 34 -->
+  <div class="swiper-slide"><img src="slide034.jpg" alt="Slide 34"></div>
+  <!-- Slide 35 -->
+  <div class="swiper-slide"><img src="slide035.jpg" alt="Slide 35"></div>
+  <!-- Slide 36 -->
+  <div class="swiper-slide"><img src="slide036.jpg" alt="Slide 36"></div>
+  <!-- Slide 37 -->
+  <div class="swiper-slide"><img src="slide037.jpg" alt="Slide 37"></div>
+  <!-- Slide 38 -->
+  <div class="swiper-slide"><img src="slide038.jpg" alt="Slide 38"></div>
+  <!-- Slide 39 -->
+  <div class="swiper-slide"><img src="slide039.jpg" alt="Slide 39"></div>
+  <!-- Slide 40 -->
+  <div class="swiper-slide"><img src="slide040.jpg" alt="Slide 40"></div>
+  <!-- Slide 41 -->
+  <div class="swiper-slide"><img src="slide041.jpg" alt="Slide 41"></div>
+  <!-- Slide 42 -->
+  <div class="swiper-slide"><img src="slide042.jpg" alt="Slide 42"></div>
+  <!-- Slide 43 -->
+  <div class="swiper-slide"><img src="slide043.jpg" alt="Slide 43"></div>
+  <!-- Slide 44 -->
+  <div class="swiper-slide"><img src="slide044.jpg" alt="Slide 44"></div>
+  <!-- Slide 45 -->
+  <div class="swiper-slide"><img src="slide045.jpg" alt="Slide 45"></div>
+  <!-- Slide 46 -->
+  <div class="swiper-slide"><img src="slide046.jpg" alt="Slide 46"></div>
+  <!-- Slide 47 -->
+  <div class="swiper-slide"><img src="slide047.jpg" alt="Slide 47"></div>
+  <!-- Slide 48 -->
+  <div class="swiper-slide"><img src="slide048.jpg" alt="Slide 48"></div>
+  <!-- Slide 49 -->
+  <div class="swiper-slide"><img src="slide049.jpg" alt="Slide 49"></div>
+  <!-- Slide 50 -->
+  <div class="swiper-slide"><img src="slide050.jpg" alt="Slide 50"></div>
+  <!-- Slide 51 -->
+  <div class="swiper-slide"><img src="slide051.jpg" alt="Slide 51"></div>
+  <!-- Slide 52 -->
+  <div class="swiper-slide"><img src="slide052.jpg" alt="Slide 52"></div>
+  <!-- Slide 53 -->
+  <div class="swiper-slide"><img src="slide053.jpg" alt="Slide 53"></div>
+  <!-- Slide 54 -->
+  <div class="swiper-slide"><img src="slide054.jpg" alt="Slide 54"></div>
+  <!-- Slide 55 -->
+  <div class="swiper-slide"><img src="slide055.jpg" alt="Slide 55"></div>
+  <!-- Slide 56 -->
+  <div class="swiper-slide"><img src="slide056.jpg" alt="Slide 56"></div>
+  <!-- Slide 57 -->
+  <div class="swiper-slide"><img src="slide057.jpg" alt="Slide 57"></div>
+  <!-- Slide 58 -->
+  <div class="swiper-slide"><img src="slide058.jpg" alt="Slide 58"></div>
+  <!-- Slide 59 -->
+  <div class="swiper-slide"><img src="slide059.jpg" alt="Slide 59"></div>
+  <!-- Slide 60 -->
+  <div class="swiper-slide"><img src="slide060.jpg" alt="Slide 60"></div>
+        
+<div class="swiper-slide"><img src="slide061.jpg" alt="Slide 61"></div>
+<!-- Slide 62 -->
+<div class="swiper-slide"><img src="slide062.jpg" alt="Slide 62"></div>
+<!-- Slide 63 -->
+<div class="swiper-slide"><img src="slide063.jpg" alt="Slide 63"></div>
+<!-- Slide 64 -->
+<div class="swiper-slide"><img src="slide064.jpg" alt="Slide 64"></div>
+<!-- Slide 65 -->
+<div class="swiper-slide"><img src="slide065.jpg" alt="Slide 65"></div>
+<!-- Slide 66 -->
+<div class="swiper-slide"><img src="slide066.jpg" alt="Slide 66"></div>
+<!-- Slide 67 -->
+<div class="swiper-slide"><img src="slide067.jpg" alt="Slide 67"></div>
+<!-- Slide 68 -->
+<div class="swiper-slide"><img src="slide068.jpg" alt="Slide 68"></div>
+<!-- Slide 69 -->
+<div class="swiper-slide"><img src="slide069.jpg" alt="Slide 69"></div>
+<!-- Slide 70 -->
+<div class="swiper-slide"><img src="slide070.jpg" alt="Slide 70"></div>
+<!-- Continue adding slides up to Slide 200 -->
+<!-- Slide 71 -->
+<div class="swiper-slide"><img src="slide071.jpg" alt="Slide 71"></div>
+<!-- Slide 72 -->
+<div class="swiper-slide"><img src="slide072.jpg" alt="Slide 72"></div>
+<!-- Slide 73 -->
+<div class="swiper-slide"><img src="slide073.jpg" alt="Slide 73"></div>
+<!-- Slide 74 -->
+<div class="swiper-slide"><img src="slide074.jpg" alt="Slide 74"></div>
+<!-- Slide 75 -->
+<div class="swiper-slide"><img src="slide075.jpg" alt="Slide 75"></div>
+<!-- Slide 76 -->
+<div class="swiper-slide"><img src="slide076.jpg" alt="Slide 76"></div>
+<!-- Slide 77 -->
+<div class="swiper-slide"><img src="slide077.jpg" alt="Slide 77"></div>
+<!-- Slide 78 -->
+<div class="swiper-slide"><img src="slide078.jpg" alt="Slide 78"></div>
+<!-- Slide 79 -->
+<div class="swiper-slide"><img src="slide079.jpg" alt="Slide 79"></div>
+<!-- Slide 80 -->
+<div class="swiper-slide"><img src="slide080.jpg" alt="Slide 80"></div>
+<!-- Continue adding slides up to Slide 200 -->
+<!-- Slide 81 -->
+<div class="swiper-slide"><img src="slide081.jpg" alt="Slide 81"></div>
+<!-- Slide 82 -->
+<div class="swiper-slide"><img src="slide082.jpg" alt="Slide 82"></div>
+<!-- Slide 83 -->
+<div class="swiper-slide"><img src="slide083.jpg" alt="Slide 83"></div>
+<!-- Slide 84 -->
+<div class="swiper-slide"><img src="slide084.jpg" alt="Slide 84"></div>
+<!-- Slide 85 -->
+<div class="swiper-slide"><img src="slide085.jpg" alt="Slide 85"></div>
+<!-- Slide 86 -->
+<div class="swiper-slide"><img src="slide086.jpg" alt="Slide 86"></div>
+<!-- Slide 87 -->
+<div class="swiper-slide"><img src="slide087.jpg" alt="Slide 87"></div>
+<!-- Slide 88 -->
+<div class="swiper-slide"><img src="slide088.jpg" alt="Slide 88"></div>
+<!-- Slide 89 -->
+<div class="swiper-slide"><img src="slide089.jpg" alt="Slide 89"></div>
+<!-- Slide 90 -->
+<div class="swiper-slide"><img src="slide090.jpg" alt="Slide 90"></div>
+<!-- Continue adding slides up to Slide 200 -->
+<!-- Slide 91 -->
+<div class="swiper-slide"><img src="slide091.jpg" alt="Slide 91"></div>
+<!-- Slide 92 -->
+<div class="swiper-slide"><img src="slide092.jpg" alt="Slide 92"></div>
+<!-- Slide 93 -->
+<div class="swiper-slide"><img src="slide093.jpg" alt="Slide 93"></div>
+<!-- Slide 94 -->
+<div class="swiper-slide"><img src="slide094.jpg" alt="Slide 94"></div>
+<!-- Slide 95 -->
+<div class="swiper-slide"><img src="slide095.jpg" alt="Slide 95"></div>
+<!-- Slide 96 -->
+<div class="swiper-slide"><img src="slide096.jpg" alt="Slide 96"></div>
+<!-- Slide 97 -->
+<div class="swiper-slide"><img src="slide097.jpg" alt="Slide 97"></div>
+<!-- Slide 98 -->
+<div class="swiper-slide"><img src="slide098.jpg" alt="Slide 98"></div>
+<!-- Slide 99 -->
+<div class="swiper-slide"><img src="slide099.jpg" alt="Slide 99"></div>
+<!-- Slide 100 -->
+<div class="swiper-slide"><img src="slide100.jpg" alt="Slide 100"></div>
+<!-- Continue adding slides up to Slide 200 -->
+<!-- Slide 101 -->
+<div class="swiper-slide"><img src="slide101.jpg" alt="Slide 101"></div>
+<!-- Slide 102 -->
+<div class="swiper-slide"><img src="slide102.jpg" alt="Slide 102"></div>
+<!-- Slide 103 -->
+<div class="swiper-slide"><img src="slide103.jpg" alt="Slide 103"></div>
+<!-- Slide 104 -->
+<div class="swiper-slide"><img src="slide104.jpg" alt="Slide 104"></div>
+<!-- Slide 105 -->
+<div class="swiper-slide"><img src="slide105.jpg" alt="Slide 105"></div>
+<!-- Slide 106 -->
+<div class="swiper-slide"><img src="slide106.jpg" alt="Slide 106"></div>
+<!-- Slide 107 -->
+<div class="swiper-slide"><img src="slide107.jpg" alt="Slide 107"></div>
+<!-- Slide 108 -->
+<div class="swiper-slide"><img src="slide108.jpg" alt="Slide 108"></div>
+<!-- Slide 109 -->
+<div class="swiper-slide"><img src="slide109.jpg" alt="Slide 109"></div>
+<!-- Slide 110 -->
+<div class="swiper-slide"><img src="slide110.jpg" alt="Slide 110"></div>
+<!-- Continue adding slides up to Slide 200 -->
+<!-- Slide 111 -->
+<div class="swiper-slide"><img src="slide111.jpg" alt="Slide 111"></div>
+<!-- Slide 112 -->
+<div class="swiper-slide"><img src="slide112.jpg" alt="Slide 112"></div>
+<!-- Slide 113 -->
+<div class="swiper-slide"><img src="slide113.jpg" alt="Slide 113"></div>
+<!-- Slide 114 -->
+<div class="swiper-slide"><img src="slide114.jpg" alt="Slide 114"></div>
+<!-- Slide 115 -->
+<div class="swiper-slide"><img src="slide115.jpg" alt="Slide 115"></div>
+<!-- Slide 116 -->
+<div class="swiper-slide"><img src="slide116.jpg" alt="Slide 116"></div>
+<!-- Slide 117 -->
+<div class="swiper-slide"><img src="slide117.jpg" alt="Slide 117"></div>
+<!-- Slide 118 -->
+<div class="swiper-slide"><img src="slide118.jpg" alt="Slide 118"></div>
+<!-- Slide 119 -->
+<div class="swiper-slide"><img src="slide119.jpg" alt="Slide 119"></div>
+<!-- Slide 120 -->
+<div class="swiper-slide"><img src="slide120.jpg" alt="Slide 120"></div>
+<!-- Continue adding slides up to Slide 200 -->
+<!-- Slide 121 -->
+<div class="swiper-slide"><img src="slide121.jpg" alt="Slide 121"></div>
+<!-- Slide 122 -->
+<div class="swiper-slide"><img src="slide122.jpg" alt="Slide 122"></div>
+<!-- Slide 123 -->
+<div class="swiper-slide"><img src="slide123.jpg" alt="Slide 123"></div>
+<!-- Slide 124 -->
+<div class="swiper-slide"><img src="slide124.jpg" alt="Slide 124"></div>
+<!-- Slide 125 -->
+<div class="swiper-slide"><img src="slide125.jpg" alt="Slide 125"></div>
+<!-- Slide 126 -->
+<div class="swiper-slide"><img src="slide126.jpg" alt="Slide 126"></div>
+<!-- Slide 127 -->
+<div class="swiper-slide"><img src="slide127.jpg" alt="Slide 127"></div>
+<!-- Slide 128 -->
+<div class="swiper-slide"><img src="slide128.jpg" alt="Slide 128"></div>
+<!-- Slide 129 -->
+<div class="swiper-slide"><img src="slide129.jpg" alt="Slide 129"></div>
+<!-- Slide 130 -->
+<div class="swiper-slide"><img src="slide130.jpg" alt="Slide 130"></div>
+<!-- Continue adding slides up to Slide 200 -->
+<!-- Slide 131 -->
+<div class="swiper-slide"><img src="slide131.jpg" alt="Slide 131"></div>
+<!-- Slide 132 -->
+<div class="swiper-slide"><img src="slide132.jpg" alt="Slide 132"></div>
+<!-- Slide 133 -->
+<div class="swiper-slide"><img src="slide133.jpg" alt="Slide 133"></div>
+<!-- Slide 134 -->
+<div class="swiper-slide"><img src="slide134.jpg" alt="Slide 134"></div>
+<!-- Slide 135 -->
+<div class="swiper-slide"><img src="slide135.jpg" alt="Slide 135"></div>
+<!-- Slide 136 -->
+<div class="swiper-slide"><img src="slide136.jpg" alt="Slide 136"></div>
+<!-- Slide 137 -->
+<div class="swiper-slide"><img src="slide137.jpg" alt="Slide 137"></div>
+<!-- Slide 138 -->
+<div class="swiper-slide"><img src="slide138.jpg" alt="Slide 138"></div>
+<!-- Slide 139 -->
+<div class="swiper-slide"><img src="slide139.jpg" alt="Slide 139"></div>
+<!-- Slide 140 -->
+<div class="swiper-slide"><img src="slide140.jpg" alt="Slide 140"></div>
+<!-- Continue adding slides up to Slide 200 -->
+<!-- Slide 141 -->
+<div class="swiper-slide"><img src="slide141.jpg" alt="Slide 141"></div>
+<!-- Slide 142 -->
+<div class="swiper-slide"><img src="slide142.jpg" alt="Slide 142"></div>
+<!-- Slide 143 -->
+<div class="swiper-slide"><img src="slide143.jpg" alt="Slide 143"></div>
+<!-- Slide 144 -->
+<div class="swiper-slide"><img src="slide144.jpg" alt="Slide 144"></div>
+<!-- Slide 145 -->
+<div class="swiper-slide"><img src="slide145.jpg" alt="Slide 145"></div>
+<!-- Slide 146 -->
+<div class="swiper-slide"><img src="slide146.jpg" alt="Slide 146"></div>
+<!-- Slide 147 -->
+<div class="swiper-slide"><img src="slide147.jpg" alt="Slide 147"></div>
+<!-- Slide 148 -->
+<div class="swiper-slide"><img src="slide148.jpg" alt="Slide 148"></div>
+<!-- Slide 149 -->
+<div class="swiper-slide"><img src="slide149.jpg" alt="Slide 149"></div>
+<!-- Slide 150 -->
+<div class="swiper-slide"><img src="slide150.jpg" alt="Slide 150"></div>
+<!-- Continue adding slides up to Slide 200 -->
+<!-- Slide 151 -->
+<div class="swiper-slide"><img src="slide151.jpg" alt="Slide 151"></div>
+<!-- Slide 152 -->
+<div class="swiper-slide"><img src="slide152.jpg" alt="Slide 152"></div>
+<!-- Slide 153 -->
+<div class="swiper-slide"><img src="slide153.jpg" alt="Slide 153"></div>
+<!-- Slide 154 -->
+<div class="swiper-slide"><img src="slide154.jpg" alt="Slide 154"></div>
+<!-- Slide 155 -->
+<div class="swiper-slide"><img src="slide155.jpg" alt="Slide 155"></div>
+<!-- Slide 156 -->
+<div class="swiper-slide"><img src="slide156.jpg" alt="Slide 156"></div>
+<!-- Slide 157 -->
+<div class="swiper-slide"><img src="slide157.jpg" alt="Slide 157"></div>
+<!-- Slide 158 -->
+<div class="swiper-slide"><img src="slide158.jpg" alt="Slide 158"></div>
+<!-- Slide 159 -->
+<div class="swiper-slide"><img src="slide159.jpg" alt="Slide 159"></div>
+<!-- Slide 160 -->
+<div class="swiper-slide"><img src="slide160.jpg" alt="Slide 160"></div>
+<!-- Continue adding slides up to Slide 200 -->
+<!-- Slide 161 -->
+<div class="swiper-slide"><img src="slide161.jpg" alt="Slide 161"></div>
+<!-- Slide 162 -->
+<div class="swiper-slide"><img src="slide162.jpg" alt="Slide 162"></div>
+<!-- Slide 163 -->
+<div class="swiper-slide"><img src="slide163.jpg" alt="Slide 163"></div>
+<!-- Slide 164 -->
+<div class="swiper-slide"><img src="slide164.jpg" alt="Slide 164"></div>
+<!-- Slide 165 -->
+<div class="swiper-slide"><img src="slide165.jpg" alt="Slide 165"></div>
+<!-- Slide 166 -->
+<div class="swiper-slide"><img src="slide166.jpg" alt="Slide 166"></div>
+<!-- Slide 167 -->
+<div class="swiper-slide"><img src="slide167.jpg" alt="Slide 167"></div>
+<!-- Slide 168 -->
+<div class="swiper-slide"><img src="slide168.jpg" alt="Slide 168"></div>
+<!-- Slide 169 -->
+<div class="swiper-slide"><img src="slide169.jpg" alt="Slide 169"></div>
+<!-- Slide 170 -->
+<div class="swiper-slide"><img src="slide170.jpg" alt="Slide 170"></div>
+<!-- Continue adding slides up to Slide 200 -->
+<!-- Slide 171 -->
+<div class="swiper-slide"><img src="slide171.jpg" alt="Slide 171"></div>
+<!-- Slide 172 -->
+<div class="swiper-slide"><img src="slide172.jpg" alt="Slide 172"></div>
+<!-- Slide 173 -->
+<div class="swiper-slide"><img src="slide173.jpg" alt="Slide 173"></div>
+<!-- Slide 174 -->
+<div class="swiper-slide"><img src="slide174.jpg" alt="Slide 174"></div>
+<!-- Slide 175 -->
+<div class="swiper-slide"><img src="slide175.jpg" alt="Slide 175"></div>
+<!-- Slide 176 -->
+<div class="swiper-slide"><img src="slide176.jpg" alt="Slide 176"></div>
+<!-- Slide 177 -->
+<div class="swiper-slide"><img src="slide177.jpg" alt="Slide 177"></div>
+<!-- Slide 178 -->
+<div class="swiper-slide"><img src="slide178.jpg" alt="Slide 178"></div>
+<!-- Slide 179 -->
+<div class="swiper-slide"><img src="slide179.jpg" alt="Slide 179"></div>
+<!-- Slide 180 -->
+<div class="swiper-slide"><img src="slide180.jpg" alt="Slide 180"></div>
+<!-- Continue adding slides up to Slide 200 -->
+<!-- Slide 181 -->
+<div class="swiper-slide"><img src="slide181.jpg" alt="Slide 181"></div>
+<!-- Slide 182 -->
+<div class="swiper-slide"><img src="slide182.jpg" alt="Slide 182"></div>
+<!-- Slide 183 -->
+<div class="swiper-slide"><img src="slide183.jpg" alt="Slide 183"></div>
+<!-- Slide 184 -->
+<div class="swiper-slide"><img src="slide184.jpg" alt="Slide 184"></div>
+<!-- Slide 185 -->
+<div class="swiper-slide"><img src="slide185.jpg" alt="Slide 185"></div>
+<!-- Slide 186 -->
+<div class="swiper-slide"><img src="slide186.jpg" alt="Slide 186"></div>
+<!-- Slide 187 -->
+<div class="swiper-slide"><img src="slide187.jpg" alt="Slide 187"></div>
+<!-- Slide 188 -->
+<div class="swiper-slide"><img src="slide188.jpg" alt="Slide 188"></div>
+<!-- Slide 189 -->
+<div class="swiper-slide"><img src="slide189.jpg" alt="Slide 189"></div>
+<!-- Slide 190 -->
+<div class="swiper-slide"><img src="slide190.jpg" alt="Slide 190"></div>
+<!-- Continue adding slides up to Slide 200 -->
+<!-- Slide 191 -->
+<div class="swiper-slide"><img src="slide191.jpg" alt="Slide 191"></div>
+<!-- Slide 192 -->
+<div class="swiper-slide"><img src="slide192.jpg" alt="Slide 192"></div>
+<!-- Slide 193 -->
+<div class="swiper-slide"><img src="slide193.jpg" alt="Slide 193"></div>
+<!-- Slide 194 -->
+<div class="swiper-slide"><img src="slide194.jpg" alt="Slide 194"></div>
+<!-- Slide 195 -->
+<div class="swiper-slide"><img src="slide195.jpg" alt="Slide 195"></div>
+<!-- Slide 196 -->
+<div class="swiper-slide"><img src="slide196.jpg" alt="Slide 196"></div>
+<!-- Slide 197 -->
+<div class="swiper-slide"><img src="slide197.jpg" alt="Slide 197"></div>
+<!-- Slide 198 -->
+<div class="swiper-slide"><img src="slide198.jpg" alt="Slide 198"></div>
+<!-- Slide 199 -->
+<div class="swiper-slide"><img src="slide199.jpg" alt="Slide 199"></div>
+<!-- Slide 200 -->
+<div class="swiper-slide"><img src="slide200.jpg" alt="Slide 200"></div>
+      <!-- Repeat the pattern for the remaining slides -->
+      <!-- slide006.jpg, slide007.jpg, ..., slide060.jpg -->
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Navigation -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    <!-- Add Search Input -->
+    <input type="text" id="searchInput" placeholder="페이지 찾기...">
+  </div>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 20,
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      // Enable swipe functionality
+      allowTouchMove: true,
+
+      // Responsive breakpoints
+      breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          centeredSlides: true, // Center slides on mobile screens
+        },
+        // when window width is >= 480px
+        480: {
+          slidesPerView: 1,
+          spaceBetween: 30
+        },
+        // when window width is >= 640px
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 40
+        }
+      }
+    });
+
+    // Search Functionality
+    document.getElementById('searchInput').addEventListener('input', function(event) {
+      var searchText = event.target.value;
+      var slideIndex = parseInt(searchText, 10); // Convert input text to integer
+      if (!isNaN(slideIndex)) { // Check if input is a valid number
+        if (slideIndex >= 1 && slideIndex <= 60) { // Ensure input is within valid range
+          swiper.slideTo(slideIndex - 1, 1000, false); // Slide to the specified index
+        }
+      }
+    });
+  </script>
+</body>
+</html>
